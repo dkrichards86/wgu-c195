@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApp.controllers.UserLoginController">
+ <children>
+      <Label alignment="CENTER" layoutX="60.0" layoutY="30.0" prefHeight="30.0" prefWidth="180.0" text="Scheduling App">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="PasswordField" layoutX="30.0" layoutY="75.0" prefHeight="75.0" prefWidth="240.0">
+         <children>
+            <Label fx:id="LoginUsernameLabel" layoutY="8.0" prefHeight="16.0" prefWidth="90.0" text="Username" />
+            <Label fx:id="LoginPasswordLabel" layoutY="56.0" prefHeight="16.0" prefWidth="90.0" text="Password" />
+            <TextField fx:id="LoginUsernameField" layoutX="90.0" prefHeight="32.0" prefWidth="150.0" />
+            <PasswordField fx:id="LoginPasswordField" layoutX="90.0" layoutY="48.0" prefHeight="32.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="240.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="LoginSaveButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Login" />
+            <Button fx:id="LoginCancelButton" layoutX="110.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Cancel" />
+         </children>
+      </AnchorPane>
+      <DialogPane fx:id="MessageBox" layoutX="30.0" layoutY="160.0" prefHeight="30.0" prefWidth="240.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApp.controllers.ManageCustomerController">
+ <children>
+      <Label fx:id="PartsPageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="30.0" prefHeight="30.0" prefWidth="180.0" text="Manage Customer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="PasswordField" layoutX="30.0" layoutY="75.0" prefHeight="210.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="CustomerNameField" prefHeight="32.0" prefWidth="300.0" promptText="Customer Name" />
+            <TextField fx:id="CustomerAddress1Field" layoutY="45.0" prefHeight="32.0" prefWidth="300.0" promptText="Address 1" />
+            <TextField fx:id="CustomerAddress2Field" layoutY="90.0" prefHeight="32.0" prefWidth="300.0" promptText="Address 2" />
+            <TextField fx:id="CustomerAddressCityField" layoutY="135.0" prefHeight="32.0" prefWidth="140.0" promptText="City" />
+            <TextField fx:id="CustomerAddressCountryField" layoutX="160.0" layoutY="135.0" prefHeight="32.0" prefWidth="140.0" promptText="Country" />
+            <TextField fx:id="CustomerAddressPostalCodeField" layoutY="180.0" prefHeight="32.0" prefWidth="140.0" promptText="Postal Code" />
+            <TextField fx:id="CustomerAddressPhoneField" layoutX="160.0" layoutY="180.0" prefHeight="32.0" prefWidth="140.0" promptText="Phone Number" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="80.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleSave" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Save" />
+            <Button layoutX="110.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

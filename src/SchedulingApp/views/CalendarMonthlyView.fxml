@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApp.controllers.CalendarMonthlyViewController">
+	<children>
+				<GridPane alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="700.0">
+					<columnConstraints>
+						<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+						<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+						<ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Button mnemonicParsing="false" onAction="#handlePreviousMonth" prefHeight="30.0" prefWidth="90.0" text="Previous" />
+            <Label fx:id="CalendarLabel" alignment="CENTER" prefHeight="30.0" prefWidth="200.0" text="Monthly Calendar" GridPane.columnIndex="1">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+						<Button mnemonicParsing="false" onAction="#handleNextMonth" prefHeight="30.0" prefWidth="90.0" text="Next" GridPane.columnIndex="2" />
+					</children>
+					<padding>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</padding>
+				</GridPane>
+						<GridPane layoutX="30.0" layoutY="75.0" prefHeight="30.0" prefWidth="700.0">
+							<columnConstraints>
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<Label fx:id="sundayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Sunday" />
+								<Label fx:id="mondayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Monday" GridPane.columnIndex="1" />
+								<Label fx:id="tuesdayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Tuesday" GridPane.columnIndex="2" />
+								<Label fx:id="wednesdayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Wednesday" GridPane.columnIndex="3" />
+								<Label fx:id="thursdayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Thursday" GridPane.columnIndex="4" />
+								<Label fx:id="fridayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Friday" GridPane.columnIndex="5" />
+								<Label fx:id="saturdayLabel" alignment="CENTER" prefWidth="80.0" styleClass="label-small" text="Saturday" GridPane.columnIndex="6" />
+							</children>
+						</GridPane>
+						<GridPane fx:id="CalendarPane" alignment="TOP_RIGHT" gridLinesVisible="true" hgap="2.0" layoutX="30.0" layoutY="105.0" prefHeight="500.0" prefWidth="700.0" vgap="2.0">
+							<columnConstraints>
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+								<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+								<RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+								<RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+								<RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+								<RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+							</rowConstraints>
+						</GridPane>
+      <Button layoutX="30.0" layoutY="630.0" mnemonicParsing="false" onAction="#handleWeekly" text="Weekly View" />
+      <AnchorPane layoutX="470.0" layoutY="630.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddAppointment" prefWidth="60.0" text="Add" />
+            <Button layoutX="70.0" mnemonicParsing="false" onAction="#handleModifyAppointment" prefWidth="60.0" text="Modify" />
+            <Button layoutX="140.0" mnemonicParsing="false" onAction="#handleDeleteAppointment" prefWidth="60.0" text="Delete" />
+            <Button layoutX="210.0" mnemonicParsing="false" onAction="#handleBack" prefWidth="60.0" text="Back" />
+         </children>
+      </AnchorPane>
+	</children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApp.controllers.ManageAppointmentController">
+ <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="300.0" text="Manage Appointment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="30.0" layoutY="75.0" prefHeight="350.0" prefWidth="300.0">
+         <children>
+            <ComboBox fx:id="AppointmentCustomerField" prefHeight="32.0" prefWidth="300.0" promptText="Customer" />
+            <ComboBox fx:id="AppointmentDescField" layoutY="45.0" prefHeight="32.0" prefWidth="300.0" promptText="Description" />
+            <TextField fx:id="AppointmentTitleField" layoutY="90.0" prefHeight="32.0" prefWidth="300.0" promptText="Title" />
+            <TextField fx:id="AppointmentContactField" layoutY="135.0" prefHeight="32.0" prefWidth="300.0" promptText="Contact" />
+            <TextField fx:id="AppointmentURLField" layoutY="180.0" prefHeight="32.0" prefWidth="300.0" promptText="URL" />
+            <TextField fx:id="AppointmentLocationField" layoutY="225.0" prefHeight="32.0" prefWidth="300.0" promptText="Location" />
+            <DatePicker fx:id="AppointmentDateField" layoutY="270.0" prefHeight="32.0" prefWidth="300.0" promptText="Date" />
+            <ComboBox fx:id="AppointmentStartField" layoutY="315.0" prefHeight="32.0" prefWidth="140.0" promptText="Start Time" />
+            <ComboBox fx:id="AppointmentEndField" layoutX="160.0" layoutY="315.0" prefHeight="32.0" prefWidth="140.0" promptText="End Time" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="80.0" layoutY="445.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleSave" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Save" />
+            <Button layoutX="110.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: DarkGrey;" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
